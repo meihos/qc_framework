@@ -1,4 +1,5 @@
 <?php
+
 namespace Core\Settings;
 
 use Core\Errors\Errors;
@@ -167,8 +168,7 @@ class Configurator
         $this->initFullAccessFolders($directory);
         $information = serialize($data);
 
-        $permissions = $this->getPermissions(dirname($directory), 3);
-
+        $permissions = $this->getPermissions($directory, 3);
         if (($permissions == '666') || ($permissions == '777')) {
             file_put_contents($path, $information);
             chmod($path, 0777);

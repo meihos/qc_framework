@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b1ccea22f9dc76b3571724f137edaa54",
+    "content-hash": "e5f74f212672ece98daa9b908f711aed",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -141,16 +141,16 @@
         },
         {
             "name": "nilportugues/sql-query-builder",
-            "version": "1.5.1",
+            "version": "1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nilportugues/php-sql-query-builder.git",
-                "reference": "4decdb547e5145d647c26b97ca1bea12d9b63a9f"
+                "reference": "a941d33caba132f6adcb05f48ed32fe14849b095"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nilportugues/php-sql-query-builder/zipball/4decdb547e5145d647c26b97ca1bea12d9b63a9f",
-                "reference": "4decdb547e5145d647c26b97ca1bea12d9b63a9f",
+                "url": "https://api.github.com/repos/nilportugues/php-sql-query-builder/zipball/a941d33caba132f6adcb05f48ed32fe14849b095",
+                "reference": "a941d33caba132f6adcb05f48ed32fe14849b095",
                 "shasum": ""
             },
             "require": {
@@ -201,7 +201,7 @@
                 "query builder",
                 "sql"
             ],
-            "time": "2017-06-21T14:30:14+00:00"
+            "time": "2018-07-19T15:10:06+00:00"
         },
         {
             "name": "nilportugues/sql-query-formatter",
@@ -260,19 +260,20 @@
         },
         {
             "name": "phpmailer/phpmailer",
-            "version": "v5.2.23",
+            "version": "v5.2.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "7115df4a6f76281109ebe352900c42403b728bb4"
+                "reference": "70362997bda4376378be7d92d81e2200550923f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/7115df4a6f76281109ebe352900c42403b728bb4",
-                "reference": "7115df4a6f76281109ebe352900c42403b728bb4",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/70362997bda4376378be7d92d81e2200550923f7",
+                "reference": "70362997bda4376378be7d92d81e2200550923f7",
                 "shasum": ""
             },
             "require": {
+                "ext-ctype": "*",
                 "php": ">=5.0.0"
             },
             "require-dev": {
@@ -332,7 +333,7 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2017-03-15T19:32:56+00:00"
+            "time": "2017-11-04T09:26:05+00:00"
         },
         {
             "name": "predis/predis",
@@ -340,12 +341,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nrk/predis.git",
-                "reference": "98ec0cc27efc1efab32b369962f97e29ecc0464a"
+                "reference": "111d100ee389d624036b46b35ed0c9ac59c71313"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nrk/predis/zipball/98ec0cc27efc1efab32b369962f97e29ecc0464a",
-                "reference": "98ec0cc27efc1efab32b369962f97e29ecc0464a",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/111d100ee389d624036b46b35ed0c9ac59c71313",
+                "reference": "111d100ee389d624036b46b35ed0c9ac59c71313",
                 "shasum": ""
             },
             "require": {
@@ -382,7 +383,7 @@
                 "predis",
                 "redis"
             ],
-            "time": "2016-11-22 14:32:30"
+            "time": "2017-07-12T14:39:17+00:00"
         },
         {
             "name": "psr/log",

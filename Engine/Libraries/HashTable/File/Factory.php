@@ -18,7 +18,7 @@ class Factory implements LibraryFactoryInterface
     public function buildLibraryInstance($settings)
     {
         $resource = null;
-        if (isset($settings['path']) && file_exists($settings['path'])) {
+        if (isset($settings['path'])) {
             $resource = new Adapter($settings['path']);
         }
 

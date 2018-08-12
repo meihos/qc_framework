@@ -52,6 +52,7 @@ abstract class AbstractLibraryFactory
         }
 
         $factoryClass = $this->factories[$type];
+
         if (!class_exists($factoryClass)) {
             $this->core->getErrors()->error('Invalid factory instance [' . $factoryClass . ']', 500);
             return null;

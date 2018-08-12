@@ -26,7 +26,7 @@ function showApp(\Core\Events\Event $e)
         echo $application->getNamespace() . "\r\n";
         echo $application->getPath() . "\r\n";
     } else {
-        echo 'LOLOLO';
+        echo 'Not found application';
     }
 }
 
@@ -45,7 +45,7 @@ $core->getErrors()->setLogger($logAdapter);
 include 'test_part.php';
 
 
-
+echo 'Finished';
 
 
 

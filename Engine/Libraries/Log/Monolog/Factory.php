@@ -17,7 +17,8 @@ class Factory implements LibraryFactoryInterface, FactoryInterface
 
     /**
      * @param $settings
-     * @return Logger|null
+     * @return Logger|mixed|null
+     * @throws \Exception
      */
     public function buildLibraryInstance($settings)
     {
@@ -38,7 +39,8 @@ class Factory implements LibraryFactoryInterface, FactoryInterface
 
     /**
      * @param string $settings
-     * @return Logger|null
+     * @return \Core\Log\Adapter\AdapterInterface|Logger|mixed|null
+     * @throws \Exception
      */
     public function buildLoggerInstance($settings)
     {

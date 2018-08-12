@@ -1,4 +1,5 @@
 <?php
+
 namespace Core\Structure\Plugins;
 
 /**
@@ -47,13 +48,13 @@ trait Collection
     protected function _CollectionAddResource($index, $resource, $collectionName = null)
     {
         $index = $this->__prepareInstanceIndex($index);
-        $collectionName = $this->__prepareCollectionName($collectionName);
+        $cName = $this->__prepareCollectionName($collectionName);
 
-        if (!is_array($this->__collectionStorage[$collectionName])) {
-            $this->__collectionStorage[$collectionName] = [];
+        if (!isset($this->__collectionStorage[$cName]) || !is_array($this->__collectionStorage[$cName])) {
+            $this->__collectionStorage[$cName] = [];
         }
 
-        $this->__collectionStorage[$collectionName][$index] = $resource;
+        $this->__collectionStorage[$cName][$index] = $resource;
         return $this;
     }
 

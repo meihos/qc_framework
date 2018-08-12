@@ -16,6 +16,8 @@ use Core\Settings\Configurator;
 use Core\Sql\ConnectionManager;
 use Core\Structure\Components\LibraryRepository;
 use Core\Structure\Components\ModuleRepository;
+use Libraries\Cache\Factory as CacheFactory;
+use Libraries\Log\Factory as LogFactory;
 
 /**
  * Class Core
@@ -161,8 +163,12 @@ class Core
     {
         $this->libraries()->loadConfig($libraryStackConfig);
         $this->modules()->loadConfig($moduleStackConfig);
-        $this->getCacheManager()->setFactories($this->libraries()->cache->getFactories());
-        $this->getLogManager()->setFactories($this->libraries()->log->getFactories());
+        if ($this->libraries()->cache instanceof CacheFactory) {
+            $this->getCacheManager()->setFactories($this->libraries()->cache->getFactories());
+        }
+        if ($this->libraries()->log instanceof LogFactory) {
+            $this->getLogManager()->setFactories($this->libraries()->log->getFactories());
+        }
 
         $this->eventManager->trigger('core.init.initComponents', ['core' => $this]);
 

@@ -108,10 +108,12 @@ function buildFile(\Core\Core $core, $baseFolder, $type, $source)
                     }
 
                     $config = $data['config'];
-                    $core->getSettingsManager()->saveConfigFile($data['filename'], $config);
-
-                    $message = 'Config file was created [' . $data['filename'] . '] ' . date('Y-m-d H:i:s') . "\r\n";
-                    echo getColoredConsoleString($message, 'green');
+                    $result = $core->getSettingsManager()->saveConfigFile($data['filename'], $config);
+                    if ($result) {
+                        $message = 'Config file was created [' . $data['filename'] . '] ' . date('Y-m-d H:i:s') . "\r\n";
+                        echo getColoredConsoleString($message, 'green');
+                    }
+                    echo getColoredConsoleString('Some error when create config', 'red');
                 }
             }
             break;
